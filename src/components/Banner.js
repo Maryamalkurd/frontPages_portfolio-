@@ -10,7 +10,7 @@ export const Banner = () => {
     <section className="banner" id="home">
       <Container>
         <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7}>
+          <Col xs={12} className="text-center">
             <TrackVisibility>
               {({ isVisible }) => (
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
@@ -31,9 +31,6 @@ export const Banner = () => {
                 </div>
               )}
             </TrackVisibility>
-          </Col>
-          <Col xs={12} md={6} xl={5}>
-            
           </Col>
         </Row>
       </Container>
