@@ -7,7 +7,7 @@ import navIcon1 from "../assets/img/nav-icon1.svg";
 
 export const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer pt-5">
       <Container>
         <Row className="align-items-center">
         
