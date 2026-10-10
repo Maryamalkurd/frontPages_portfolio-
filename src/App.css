@@ -652,6 +652,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-right: auto;
   max-width: 700px;
 }
+.your-class {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+.banner h1 {
+  text-align: center;
+}
 .social-icon a:hover svg {
   color: #121212;
 }
