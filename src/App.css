@@ -664,7 +664,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #121212;
 }
 .footer {
-  background: #121212;      /* نفس لون خلفية الصفحة */
-  background-image: none;   /* يشيل الصورة الضبابية */
+  display: flow-root;
+  background-image: url("./assets/img/footer-bg.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   padding: 0 0 50px 0;
 }
