@@ -674,3 +674,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .footer .social-icon {
   margin-top: 40px;
 }
+.wrap {
+  display: flex;
+  justify-content: center;
+}
