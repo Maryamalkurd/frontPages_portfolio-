@@ -23,7 +23,7 @@ export const Banner = () => {
                     interface to the database behind it. I'm open to new
                     opportunities and projects.
                   </p>
-                  <HashLink className="warp" to="#connect">
+                  <HashLink to="#connect">
                     <button>
                       Let's Connect <ArrowRightCircle size={25} />
                     </button>
