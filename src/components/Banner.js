@@ -24,7 +24,7 @@ export const Banner = () => {
                     opportunities and projects.
                   </p>
                   <HashLink to="#connect">
-                    <button>
+                    <button className="warp">
                       Let's Connect <ArrowRightCircle size={25} />
                     </button>
                   </HashLink>
