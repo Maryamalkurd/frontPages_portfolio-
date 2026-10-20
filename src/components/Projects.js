@@ -4,6 +4,7 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import projImg4 from "../assets/img/project-img4.png";
+import projImg5 from "../assets/img/chat_covered.png";
 
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
@@ -49,7 +50,7 @@ const projects = [
     category: "first",
   },
   {
-    id: 4,
+    id: 5,
     title: "CRM system",
     description: "full-stack CRM website php + mySQL",
     // imgUrl: projImg4,
@@ -57,12 +58,20 @@ const projects = [
     category: "third",
   },
     {
-    id: 5,
+    id: 6,
     title: "Ecommerce Website",
     description: "React and Node website to build a fully-functional e-commerce website exactly like amazon. Open your code editor and follow me for the next hours to build an e-commerce website using MERN stack.",
     // imgUrl: projImg1,
     projectUrl: "https://github.com/Maryamalkurd/Ecommerce-website-with-nodejs",
     category: "third",
+  },
+  {
+    id: 7,
+    title: "RealTime live Chat ",
+    description: "RealTime live Chat  socket.io + node js ",
+    imgUrl: projImg5,
+    projectUrl: "https://github.com/Maryamalkurd/RealTime_simple_chatApp",
+    category: "second",
   },
 ];
 
