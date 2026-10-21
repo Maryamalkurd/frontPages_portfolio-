@@ -4,7 +4,7 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import projImg4 from "../assets/img/project-img4.png";
-import projImg5 from "../assets/img/chat_covered.png";
+import projImg5 from "../assets/img/projectImg5.png";
 
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
