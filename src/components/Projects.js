@@ -5,6 +5,7 @@ import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import projImg4 from "../assets/img/project-img4.png";
 import projImg5 from "../assets/img/projectImg5.png";
+import projImg6 from "../assets/img/MEMCRM.png";
 
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
@@ -53,7 +54,7 @@ const projects = [
     id: 5,
     title: "CRM system",
     description: "full-stack CRM website php + mySQL",
-    // imgUrl: projImg4,
+     imgUrl: projImg6,
     projectUrl: "https://github.com/Maryamalkurd/MEM_CRM",
     category: "third",
   },
