@@ -102,7 +102,8 @@ const skills = [
   { id: 4, name: "PostgreSQL / SQL", percentage: 90 },
   { id: 5, name: "Node.js & Express.js", percentage: 90 },
   { id: 6, name: "REST APIs", percentage: 80 },
-  { id: 6, name: "Git & GitHub", percentage: 90 },
+  { id: 7, name: "Git & GitHub", percentage: 90 },
+  { id: 8, name: "MongoDB", percentage: 80 },
 ];
 
 const responsive = {
