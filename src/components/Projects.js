@@ -9,7 +9,7 @@ import projImg6 from "../assets/img/MEMCRM.png";
 import projImg7 from "../assets/img/amazona1.png";
 
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import "animate.css";
+// import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 const tabs = [
@@ -87,7 +87,7 @@ export const Projects = () => {
           <Col xs={12}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                <div>
                   <h2>Projects</h2>
                   <p>
                     A selection of projects I've built across the front end, back end, and everything in between.
