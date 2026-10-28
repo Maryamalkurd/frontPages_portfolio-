@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 import contactImg from "../assets/img/contact-img.svg";
-import "animate.css";
+// import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 const SERVICE_ID = "service_8k64i0h";
@@ -63,7 +63,7 @@ export const Contact = () => {
             <TrackVisibility>
               {({ isVisible }) => (
                 <img
-                  className={isVisible ? "animate__animated animate__zoomIn" : ""}
+                  className={isVisible ? "" : ""}
                   src={contactImg}
                   alt="Contact Us"
                 />
@@ -73,7 +73,7 @@ export const Contact = () => {
           <Col xs={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                <div className={isVisible ? "" : ""}>
                   <h2>Get In Touch</h2>
                   <form onSubmit={handleSubmit}>
                     <Row>
