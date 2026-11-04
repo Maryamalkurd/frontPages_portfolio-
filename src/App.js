@@ -8,7 +8,7 @@ import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
-import { ProjectDetail } from "./pages/ProjectDetail";
+import { ProjectDetail } from "./components/pages/ProjectDetail";
 
 const Home = () => {
   const { hash } = useLocation();
