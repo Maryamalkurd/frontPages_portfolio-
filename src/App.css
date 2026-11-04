@@ -747,6 +747,44 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .detail-btn:hover { opacity: 0.85; color: #fff; }
 .detail-btn-outline { background: transparent; border-color: #fff; }
+/************ Skills (grouped tags) ************/
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  text-align: left;
+}
+.skill-group {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 24px;
+  transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.skill-group:hover {
+  border-color: #AA367C;
+  transform: translateY(-4px);
+}
+.skill-group h5 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%) 1;
+}
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skill-tags span {
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
 
 @media (max-width: 767px) {
   .project p { width: 90%; }
