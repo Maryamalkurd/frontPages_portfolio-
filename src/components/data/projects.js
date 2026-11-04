@@ -1,10 +1,10 @@
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
-import projImg4 from "../assets/img/project-img4.png";
-import projImg5 from "../assets/img/projectImg5.png";
-import projImg6 from "../assets/img/MEMCRM.png";
-import projImg7 from "../assets/img/amazona1.png";
+import projImg1 from "../../assets/img/project-img1.png";
+import projImg2 from "../../assets/img/project-img2.png";
+import projImg3 from "../../assets/img/project-img3.png";
+import projImg4 from "../../assets/img/project-img4.png";
+import projImg5 from "../../assets/img/projectImg5.png";
+import projImg6 from "../../assets/img/MEMCRM.png";
+import projImg7 from "../../assets/img/amazona1.png";
 
 // Tab keys must stay "first" | "second" | "third" (CSS targets them).
 export const tabs = [
