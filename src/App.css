@@ -328,6 +328,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 0 auto;
   position: relative;
 }
+.skill-badge {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 15px auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+}
 .skill-slider .item img {
   width: 50%;
   margin: 0 auto 15px auto;
@@ -371,6 +384,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 33.33333%;
 }
 .project .nav.nav-pills .nav-link {
+  cursor: pointer;
   background-color: transparent;
   border-radius: 0;
   padding: 17px 0;
@@ -415,47 +429,52 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-imgbx {
   position: relative;
-  border-radius: 30px;
   overflow: hidden;
-  margin-bottom: 24px;
 }
-.proj-imgbx::before {
-  content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  opacity: 0.85;
+.proj-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.proj-hover {
   position: absolute;
-  width: 100%;
-  height: 0;
-  transition: 0.4s ease-in-out;
-}
-.proj-imgbx:hover::before {
-  height: 100%;
-}
-.proj-txtx {
-  position: absolute;
-  text-align: center;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.5s ease-in-out;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
   opacity: 0;
-  width: 100%;
+  transition: opacity 0.3s ease-in-out;
 }
-.proj-imgbx:hover .proj-txtx {
-  top: 50%;
+.proj-hover span {
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  padding: 10px 22px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+}
+.proj-imgbx:hover .proj-hover {
   opacity: 1;
 }
-.proj-txtx h4 {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1.1em;
+.proj-info {
+  padding: 18px 22px 24px;
+  text-align: left;
 }
-.proj-txtx span {
-  font-style: italic;
-  font-weight: 400;
+.proj-info h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.project .proj-info p {
+  width: 100%;
+  margin: 0;
+  text-align: left;
   font-size: 15px;
-  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  color: #B8B8B8;
 }
 .background-image-right {
   top: 20%;
@@ -677,4 +696,62 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .wrap {
   display: flex;
   justify-content: center;
+}
+
+
+/************ Project Detail Page ************/
+.project-detail {
+  background: #000;
+  min-height: 100vh;
+  padding: 140px 0 80px;
+  color: #fff;
+}
+.project-detail .back-link {
+  color: #B8B8B8;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 24px;
+  transition: color 0.2s;
+}
+.project-detail .back-link:hover { color: #fff; }
+.project-detail h1 { font-size: 45px; font-weight: 700; margin-bottom: 8px; }
+.detail-client { color: #B8B8B8; margin-bottom: 24px; }
+.detail-hero {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 24px;
+  margin: 16px 0 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+.detail-body { max-width: 800px; }
+.detail-body h3 { font-size: 24px; font-weight: 700; margin: 28px 0 12px; }
+.detail-body p { color: #B8B8B8; font-size: 18px; line-height: 1.6em; letter-spacing: 0.5px; }
+.detail-tech { display: flex; flex-wrap: wrap; gap: 10px; }
+.detail-tech span {
+  padding: 6px 16px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+}
+.detail-links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 36px; }
+.detail-btn {
+  padding: 14px 30px;
+  border-radius: 30px;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: opacity 0.2s;
+}
+.detail-btn:hover { opacity: 0.85; color: #fff; }
+.detail-btn-outline { background: transparent; border-color: #fff; }
+
+@media (max-width: 767px) {
+  .project p { width: 90%; }
+  .project .nav.nav-pills { width: 100%; }
+  .project .nav.nav-pills .nav-link { font-size: 14px; }
+  .project-detail { padding-top: 110px; }
+  .project-detail h1 { font-size: 32px; }
 }
