@@ -1,81 +1,9 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
-import projImg4 from "../assets/img/project-img4.png";
-import projImg5 from "../assets/img/projectImg5.png";
-import projImg6 from "../assets/img/MEMCRM.png";
-import projImg7 from "../assets/img/amazona1.png";
-
+import { tabs, projects } from "../data/projects";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-
-const tabs = [
-  { key: "first", label: "Tab 1" },
-  { key: "second", label: "Tab 2" },
-  { key: "third", label: "Tab 3" },
-];
-
-const projects = [
-  {
-    id: 1,
-    title: "Professional lanading page",
-    description: "HTML + CSS + Bootstrap + javaScript + animation libraries",
-    imgUrl: projImg1,
-    projectUrl: "https://maryamalkurd.github.io/Pro.-Landing-Page/",
-    category: "first",
-  },
-  {
-    id: 2,
-    title: "Portfolio Site",
-    description: "Full-stack development React js + Express js + PostgreSQL",
-    imgUrl: projImg2,
-    projectUrl: "https://github.com/Maryamalkurd/Personal-Portfolio",
-    category: "first",
-  },
-  {
-    id: 3,
-    title: "Front-end dashboard",
-    description: "HTML + CSS + Bootstrap + javaScript",
-    imgUrl: projImg3,
-    projectUrl: "https://maryamalkurd.github.io/Dashboard/",
-    category: "second",
-  },
-  {
-    id: 4,
-    title: "Front-End dashboard",
-    description: "HTML+CSS+JS+Bootstrap",
-    imgUrl: projImg4,
-    projectUrl: "https://maryamalkurd.github.io/Control-Panel/",
-    category: "first",
-  },
-  {
-    id: 5,
-    title: "CRM system",
-    description: "full-stack CRM website php + mySQL",
-     imgUrl: projImg6,
-    projectUrl: "https://github.com/Maryamalkurd/MEM_CRM",
-    category: "third",
-  },
-    {
-    id: 6,
-    title: "Ecommerce Website",
-    description: "React and Node website to build a fully-functional e-commerce website exactly like amazon. Open your code editor and follow me for the next hours to build an e-commerce website using MERN stack.",
-     imgUrl: projImg7,
-    projectUrl: "https://github.com/Maryamalkurd/Ecommerce-website-with-nodejs",
-    category: "third",
-  },
-  {
-    id: 7,
-    title: "RealTime live Chat ",
-    description: "RealTime live Chat  socket.io + node js ",
-    imgUrl: projImg5,
-    projectUrl: "https://github.com/Maryamalkurd/RealTime_simple_chatApp",
-    category: "second",
-  },
-];
 
 export const Projects = () => {
   const byCategory = (cat) => projects.filter((p) => p.category === cat);
