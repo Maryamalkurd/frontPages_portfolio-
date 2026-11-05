@@ -1,7 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { ArrowRightCircle } from "react-bootstrap-icons";
 import { HashLink } from "react-router-hash-link";
-import headerImg from "../assets/img/header-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
@@ -14,20 +12,23 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) => (
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <span className="tagline">Welcome to my Portfolio</span>
-                  <h1>Hi! I'm Mariam, Full-Stack Developer</h1>
+                  <span className="tagline">Full-Stack Developer</span>
+                  <h1>Mariam Alkurd</h1>
+                  <h2 className="hero-role">Building fast, reliable web applications</h2>
                   <p>
-                    I'm a Computer Systems Engineer who builds fast, responsive web
-                    applications with React.js, Express.js, and PostgreSQL. I enjoy
-                    turning ideas into clean, user-friendly products, from the
-                    interface to the database behind it. I'm open to new
-                    opportunities and projects.
+                    Software Engineer specializing in React, Node.js /
+                    Express and PostgreSQL. I design and build responsive,
+                    user-friendly products, from the interface to the database
+                    behind it. Open to new opportunities and freelance projects.
                   </p>
-                  <HashLink className="warp d-flex justify-content-center" to="#connect">
-                    <button>
-                      Let's Connect <ArrowRightCircle size={25} />
-                    </button>
-                  </HashLink>
+                  <div className="hero-buttons">
+                    <HashLink className="hero-btn hero-btn-fill" to="#projects">
+                      View Projects
+                    </HashLink>
+                    <HashLink className="hero-btn" to="#connect">
+                      Let's Connect
+                    </HashLink>
+                  </div>
                 </div>
               )}
             </TrackVisibility>
