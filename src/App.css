@@ -987,3 +987,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .education h2 { font-size: 32px; }
   .edu-card { flex-direction: column; align-items: flex-start; padding: 22px; gap: 16px; }
 }
+/************ Education entry inside the timeline ************/
+.exp-edu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.exp-year {
+  flex-shrink: 0;
+  min-width: 92px;
+  text-align: center;
+  padding: 14px 16px;
+  border-radius: 16px;
+  font-size: 22px;
+  font-weight: 700;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+}
+.exp-edu h6 { margin-bottom: 8px; }
+.exp-edu p {
+  color: #B8B8B8;
+  font-size: 15px;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .exp-edu { flex-direction: column; align-items: flex-start; gap: 14px; }
+}
