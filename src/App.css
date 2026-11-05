@@ -747,6 +747,55 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .detail-btn:hover { opacity: 0.85; color: #fff; }
 .detail-btn-outline { background: transparent; border-color: #fff; }
+
+@media (max-width: 767px) {
+  .project p { width: 90%; }
+  .project .nav.nav-pills { width: 100%; }
+  .project .nav.nav-pills .nav-link { font-size: 14px; }
+  .project-detail { padding-top: 110px; }
+  .project-detail h1 { font-size: 32px; }
+}
+
+/************ Hero (professional intro) ************/
+.banner .hero-role {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 40px;
+}
+.hero-btn {
+  padding: 14px 32px;
+  border-radius: 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.hero-btn:hover { background: #fff; color: #121212; }
+.hero-btn-fill {
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  border-color: transparent;
+}
+.hero-btn-fill:hover { opacity: 0.85; background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); color: #fff; }
+@media (max-width: 767px) {
+  .banner h1 { font-size: 40px; }
+  .banner .hero-role { font-size: 20px; }
+}
+
 /************ Skills (grouped tags) ************/
 .skill-groups {
   display: grid;
@@ -784,12 +833,4 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 14px;
   background: rgba(255, 255, 255, 0.08);
   color: #fff;
-}
-
-@media (max-width: 767px) {
-  .project p { width: 90%; }
-  .project .nav.nav-pills { width: 100%; }
-  .project .nav.nav-pills .nav-link { font-size: 14px; }
-  .project-detail { padding-top: 110px; }
-  .project-detail h1 { font-size: 32px; }
 }
