@@ -15,7 +15,7 @@ const skillGroups = [
   },
   {
     title: "Databases",
-    skills: ["PostgreSQL", "MongoDB"],
+    skills: ["PostgreSQL", "MongoDB","mySQL"],
   },
   {
     title: "Tools & Platforms",
@@ -24,10 +24,10 @@ const skillGroups = [
       "SEO Optimization", "Zoho Books", "Microsoft 365", "Data Reporting",
     ],
   },
-  {
-    title: "Languages",
-    skills: ["Arabic (Native)", "English (Fluent)"],
-  },
+  // {
+  //   title: "Languages",
+  //   skills: ["Arabic (Native)", "English (Fluent)"],
+  // },
 ];
 
 export const Skills = () => (
