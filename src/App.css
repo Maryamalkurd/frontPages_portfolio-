@@ -929,3 +929,61 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .exp-dot { left: -31px; }
   .exp-card { padding: 20px; }
 }
+/************ Education ************/
+.education {
+  padding: 40px 0 80px;
+  background: #000;
+  color: #fff;
+}
+.education h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.edu-card {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  max-width: 860px;
+  margin: 0 auto;
+  background: #151515;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 28px 32px;
+  transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.edu-card:hover {
+  border-color: #AA367C;
+  transform: translateY(-4px);
+}
+.edu-year {
+  flex-shrink: 0;
+  min-width: 96px;
+  text-align: center;
+  padding: 14px 18px;
+  border-radius: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+}
+.edu-info h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.edu-info h6 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #c9a6ff;
+  margin-bottom: 8px;
+}
+.edu-info p {
+  color: #B8B8B8;
+  font-size: 15px;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .education h2 { font-size: 32px; }
+  .edu-card { flex-direction: column; align-items: flex-start; padding: 22px; gap: 16px; }
+}
