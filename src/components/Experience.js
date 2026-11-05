@@ -72,6 +72,18 @@ export const Experience = () => (
                   </div>
                 </div>
               ))}
+
+              <div className="exp-item">
+                <span className="exp-dot" />
+                <div className="exp-card exp-edu">
+                  <div className="exp-year">2024</div>
+                  <div>
+                    <h4>B.Sc. in Computer Systems Engineering</h4>
+                    <h6>Al-Azhar University – Gaza</h6>
+                    <p>Faculty of Engineering and Information Technology</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}
