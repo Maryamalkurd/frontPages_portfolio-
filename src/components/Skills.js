@@ -3,19 +3,30 @@ import colorSharp from "../assets/img/color-sharp.png";
 const skillGroups = [
   {
     title: "Front-End",
-    skills: ["React", "JavaScript (ES6+)", "HTML", "CSS", "Bootstrap"],
+    skills: [
+      "React.js", "Redux", "React Router", "JavaScript",
+      "HTML5", "CSS3", "SASS", "Bootstrap 4",
+      "Material UI", "AJAX / Fetch API",
+    ],
   },
   {
     title: "Back-End",
-    skills: ["Node.js", "Express.js", "REST APIs", "PHP", "socket.io"],
+    skills: ["Node.js", "Express.js", "REST APIs", "PHP", "Python", "Java"],
   },
   {
     title: "Databases",
-    skills: ["PostgreSQL", "MySQL", "MongoDB"],
+    skills: ["PostgreSQL", "MongoDB"],
   },
   {
-    title: "Tools",
-    skills: ["Git", "GitHub"],
+    title: "Tools & Platforms",
+    skills: [
+      "Git", "GitHub", "npm", "Stripe", "PayPal",
+      "SEO Optimization", "Zoho Books", "Microsoft 365", "Data Reporting",
+    ],
+  },
+  {
+    title: "Languages",
+    skills: ["Arabic (Native)", "English (Fluent)"],
   },
 ];
 
