@@ -834,3 +834,98 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: rgba(255, 255, 255, 0.08);
   color: #fff;
 }
+/************ Experience ************/
+.experience {
+  padding: 80px 0;
+  background: #000;
+  color: #fff;
+}
+.experience h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+}
+.experience .exp-sub {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  text-align: center;
+  max-width: 600px;
+  margin: 14px auto 50px;
+}
+.exp-timeline {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  padding-left: 32px;
+  border-left: 2px solid rgba(255, 255, 255, 0.15);
+}
+.exp-item {
+  position: relative;
+  margin-bottom: 32px;
+}
+.exp-dot {
+  position: absolute;
+  left: -41px;
+  top: 28px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  box-shadow: 0 0 0 4px #000;
+}
+.exp-card {
+  background: #151515;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 26px 28px;
+  transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.exp-card:hover {
+  border-color: #AA367C;
+  transform: translateY(-4px);
+}
+.exp-period {
+  display: inline-block;
+  font-size: 14px;
+  color: #B8B8B8;
+  margin-bottom: 8px;
+}
+.exp-card h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.exp-card h6 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #c9a6ff;
+  margin-bottom: 14px;
+}
+.exp-card ul {
+  padding-left: 18px;
+  margin-bottom: 16px;
+}
+.exp-card li {
+  color: #B8B8B8;
+  font-size: 15px;
+  line-height: 1.6em;
+  margin-bottom: 6px;
+}
+.exp-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.exp-tech span {
+  padding: 5px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.08);
+}
+@media (max-width: 767px) {
+  .experience h2 { font-size: 32px; }
+  .exp-timeline { padding-left: 22px; }
+  .exp-dot { left: -31px; }
+  .exp-card { padding: 20px; }
+}
