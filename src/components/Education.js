@@ -7,7 +7,7 @@ export const Education = () => (
       <TrackVisibility>
         {({ isVisible }) => (
           <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-            <h2>Education</h2>
+            // <h2>Education</h2>
             <div className="edu-card">
               <div className="edu-year">2024</div>
               <div className="edu-info">
