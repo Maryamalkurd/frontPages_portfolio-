@@ -12,15 +12,12 @@ const freelance = {
     {
       client: "Trackita Pty Ltd",
       place: "Australia",
-      text: "Contributed to an open-source, freely accessible design system aligned with Storybook’s visual identity, collaborating with the
-engineering team on a project with 2,000+ developers and helping the product reach 97.88M+ monthly installs.",
+      text: "Contributed to an open-source, freely accessible design system aligned with Storybook’s visual identity, collaborating with the engineering team on a project with 2,000+ developers and helping the product reach 97.88M+ monthly installs.",
     },
     {
       client: "Aesthetic Essential",
       place: "Georgia",
-      text: "Developed a responsive React.js website for a beauty and cosmetics business, building the Home, Products, About, and
-Contact pages to showcase a catalog of 600+ products and the brand, contributing to its online presence as the business
-reached 10,000 sales per month.",
+      text: "Developed a responsive React.js website for a beauty and cosmetics business, building the Home, Products, About, and Contact pages to showcase a catalog of 600+ products and the brand, contributing to its online presence as the business reached 10,000 sales per month.",
     },
   ],
   tech: ["React.js", "Express.js", "PostgreSQL"],
