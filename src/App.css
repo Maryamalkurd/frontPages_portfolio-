@@ -861,7 +861,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 64px;
-  align-items: start;
+  align-items: stretch;
 }
 .exp-timeline::before {
   content: "";
@@ -894,6 +894,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .exp-col-right .exp-dot {
   right: auto;
   left: -40px;
+}
+/* Right column: first card stretches so both columns end at the same height */
+.exp-col-right .exp-item:first-child {
+  flex: 1;
+  display: flex;
+}
+.exp-col-right .exp-item:first-child .exp-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.exp-col-right .exp-item:first-child ul {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.exp-col-right .exp-item:first-child li {
+  margin-bottom: 0;
 }
 .exp-card {
   background: #151515;
@@ -992,6 +1011,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     right: auto;
   }
   .exp-card { padding: 20px; }
+  .exp-col-right .exp-item:first-child ul { display: block; }
+  .exp-col-right .exp-item:first-child li { margin-bottom: 6px; }
   .exp-edu { flex-direction: column; align-items: flex-start; gap: 14px; }
 }
 
