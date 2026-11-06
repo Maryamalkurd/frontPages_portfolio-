@@ -47,8 +47,8 @@ const frystmat = {
   tech: ["Zoho Books", "Zoho CRM", "Reporting"],
 };
 
-const leftColumn = [freelance, reach];
-const rightColumn = [frystmat];
+const leftColumn = [frystmat, reach];
+const rightColumn = [freelance];
 
 const JobCard = ({ job }) => (
   <div className="exp-item">
