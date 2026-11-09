@@ -1216,8 +1216,4 @@ nav.navbar a.navbar-brand.brand-name {
   letter-spacing: 0.5px;
   color: #fff;
   text-decoration: none;
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
