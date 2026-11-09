@@ -1302,3 +1302,96 @@ select {
   font-family: var(--font-main);
   font-weight: 500;
 }
+
+/************ Footer (contact rows) ************/
+.site-footer {
+  background: radial-gradient(900px 300px at 85% 0, rgba(170, 54, 124, 0.18), transparent), #0d0d14;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 70px 0 0;
+  color: #fff;
+}
+.sf-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 50px;
+  padding-bottom: 60px;
+}
+.sf-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #a9a9b8;
+  margin: 0 0 22px;
+  text-align: left;
+}
+.sf-title {
+  font-size: clamp(28px, 3.6vw, 42px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 30px;
+}
+.sf-title em { font-style: normal; color: #8d6bff; }
+.sf-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 9px 0;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+.sf-row svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.25s ease-in-out;
+}
+.sf-row span {
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease-in-out;
+}
+.sf-row:hover { color: #fff; }
+.sf-row:hover span { border-color: #AA367C; }
+.sf-row:hover svg { stroke: #e05aa8; }
+.sf-links a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 7px 0;
+  transition: color 0.25s ease-in-out, padding-left 0.25s ease-in-out;
+}
+.sf-links a:hover { color: #e05aa8; padding-left: 6px; }
+.sf-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 22px 0 26px;
+  font-size: 13px;
+  color: #a9a9b8;
+}
+.sf-top {
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0;
+}
+.sf-top:hover { color: #e05aa8; }
+@media (max-width: 760px) {
+  .sf-grid { grid-template-columns: 1fr; gap: 34px; }
+}
