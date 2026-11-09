@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <>
     <Banner />
-   <About />
+   // <About />
    <Skills />
    <Experience />
    <Projects />
