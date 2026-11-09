@@ -1217,3 +1217,55 @@ nav.navbar a.navbar-brand.brand-name {
   color: #fff;
   text-decoration: none;
 }
+
+/************ What I bring ************/
+.bring {
+  background: #000;
+  color: #fff;
+  padding: 80px 0 90px;
+}
+.bring .about-head { margin-bottom: 10px; }
+.bring-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.bring-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 26px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  text-decoration: none;
+  transition: padding-left 0.3s ease-in-out;
+}
+.bring-row:hover {
+  padding-left: 14px;
+  color: #fff;
+}
+.bring-num {
+  min-width: 28px;
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 13px;
+  color: #b8b8b8;
+}
+.bring-title {
+  flex: 1;
+  font-size: clamp(22px, 3.4vw, 42px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.bring-arrow {
+  font-size: 20px;
+  color: #b8b8b8;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.bring-row:hover .bring-arrow {
+  color: #AA367C;
+  transform: translate(3px, -3px);
+}
+@media (max-width: 767px) {
+  .bring-row { gap: 16px; padding: 20px 0; }
+}
