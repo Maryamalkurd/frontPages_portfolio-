@@ -71,7 +71,7 @@ export const Footer = () => {
         </div>
 
         <div className="sf-bar">
-          <span>© 2026 Mariam Alkurd. All rights reserved.</span>
+          <span>© 2026 . All rights reserved.</span>
           <button
             type="button"
             className="sf-top"
