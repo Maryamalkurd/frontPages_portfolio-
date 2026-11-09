@@ -66,6 +66,19 @@ button {
 input:focus, textarea:focus, select:focus {
   outline: none;
 }
+   /************ Navbar: name instead of logo ************/
+   nav.navbar a.navbar-brand.brand-name {
+     width: auto;
+     font-size: 22px;
+     font-weight: 700;
+     letter-spacing: 0.5px;
+     color: #fff;
+     text-decoration: none;
+     background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+     -webkit-background-clip: text;
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+   }
 
 @media (min-width:1700px) {
 	main .container {
