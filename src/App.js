@@ -28,7 +28,6 @@ const Home = () => {
   return (
     <>
     <Banner />
-   // <About />
    <Skills />
    <Experience />
    <Projects />
