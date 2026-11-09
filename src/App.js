@@ -8,6 +8,7 @@ import { About } from "./components/About";
 import { Skills } from "./components/Skills";
 import { Experience } from "./components/Experience";
 import { Projects } from "./components/Projects";
+import { WhatIBring } from "./components/WhatIBring";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { ProjectDetail } from "./components/pages/ProjectDetail";
@@ -26,12 +27,13 @@ const Home = () => {
 
   return (
     <>
-      <Banner />
-    <About />
-      <Skills />
-    <Experience />
-      <Projects />
-      <Contact />
+    <Banner />
+   <About />
+   <Skills />
+   <Experience />
+   <Projects />
+   <WhatIBring />
+   <Contact />
     </>
   );
 };
