@@ -1,7 +1,3 @@
-import "animate.css";
-import TrackVisibility from "react-on-screen";
-
-// A point is either a plain string or { client, place, text } (client name gets highlighted).
 const freelance = {
   role: "Freelance Full-Stack Developer",
   company: "Self-employed · Remote",
@@ -12,15 +8,14 @@ const freelance = {
     {
       client: "Trackita Pty Ltd",
       place: "Australia",
-      text: "Contributed to an open-source, freely accessible design system aligned with Storybook’s visual identity, collaborating with the engineering team on a project with 2,000+ developers and helping the product reach 97.88M+ monthly installs.",
+      text: "contributed to an open-source design system aligned with Storybook's visual identity, working with an engineering team on a project with 2,000+ developers.",
     },
     {
       client: "Aesthetic Essential",
       place: "Georgia",
-      text: "Developed a responsive React.js website for a beauty and cosmetics business, building the Home, Products, About, and Contact pages to showcase a catalog of 600+ products and the brand, contributing to its online presence as the business reached 10,000 sales per month.",
+      text: "developed a responsive React.js website with Home, Products, About and Contact pages, showcasing a catalog of 600+ products.",
     },
   ],
-  tech: ["React.js", "Express.js", "PostgreSQL"],
 };
 
 const reach = {
@@ -32,7 +27,6 @@ const reach = {
     "Built an admin dashboard with 3 charts, authentication, file uploads and role-based access control.",
     "Implemented the front end of 2+ e-commerce websites with product catalogs, shopping carts and a one-step checkout supporting PayPal and Stripe.",
   ],
-  tech: ["React.js", "HTML", "CSS", "Stripe", "PayPal"],
 };
 
 const frystmat = {
@@ -44,17 +38,16 @@ const frystmat = {
     "Kept international clients updated on around 30 cargo shipments each month, helping avoid port charges of $300+ per day for late shipments.",
     "Trained and managed new employees, in person and remotely, through onboarding on company systems and workflows.",
   ],
-  tech: ["Zoho Books", "Zoho CRM", "Reporting"],
 };
 
-const leftColumn = [frystmat, reach];
-const rightColumn = [freelance];
+const leftColumn = [freelance, reach];
+const rightColumn = [frystmat];
 
 const JobCard = ({ job }) => (
-  <div className="exp-item">
-    <span className="exp-dot" />
-    <div className="exp-card">
-      <span className="exp-period">{job.period}</span>
+  <div className="sx-item">
+    <span className="sx-dot" />
+    <div className="sx-ecard">
+      <span className="sx-per">{job.period}</span>
       <h4>{job.role}</h4>
       <h6>{job.company}</h6>
       <ul>
@@ -63,58 +56,44 @@ const JobCard = ({ job }) => (
             <li key={i}>{pt}</li>
           ) : (
             <li key={i}>
-              <span className="exp-client">{pt.client}</span> ({pt.place}): {pt.text}
+              <span className="sx-co">{pt.client}</span> ({pt.place}): {pt.text}
             </li>
           )
         )}
       </ul>
-      <div className="exp-tech">
-        {job.tech.map((t) => (
-          <span key={t}>{t}</span>
-        ))}
-      </div>
     </div>
   </div>
 );
 
 export const Experience = () => (
-  <section className="experience" id="experience">
+  <section className="sx" id="experience">
     <div className="container">
-      <TrackVisibility>
-        {({ isVisible }) => (
-          <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-            <h2>Experience</h2>
-            <p className="exp-sub">
-              Freelance and remote roles across web development and business operations.
-            </p>
-            <div className="exp-timeline">
-              <div className="exp-col exp-col-left">
-                {leftColumn.map((job) => (
-                  <JobCard key={job.role} job={job} />
-                ))}
-              </div>
-
-              <div className="exp-col exp-col-right">
-                {rightColumn.map((job) => (
-                  <JobCard key={job.role} job={job} />
-                ))}
-
-                <div className="exp-item">
-                  <span className="exp-dot" />
-                  <div className="exp-card exp-edu">
-                    <div className="exp-year">2024</div>
-                    <div>
-                      <h4>B.Sc. in Computer Systems Engineering</h4>
-                      <h6>Al-Azhar University – Gaza</h6>
-                      <p>Faculty of Engineering and Information Technology</p>
-                    </div>
-                  </div>
-                </div>
+      <div className="sx-head">
+        <span>Experience</span>
+        <span>Work and education</span>
+      </div>
+      <div className="sx-tl">
+        <div className="sx-col">
+          {leftColumn.map((job) => (
+            <JobCard key={job.role} job={job} />
+          ))}
+        </div>
+        <div className="sx-col sx-col-right">
+          {rightColumn.map((job) => (
+            <JobCard key={job.role} job={job} />
+          ))}
+          <div className="sx-item">
+            <span className="sx-dot" />
+            <div className="sx-ecard sx-edu">
+              <div className="sx-year">2024</div>
+              <div>
+                <h4>B.Sc. in Computer Systems Engineering</h4>
+                <h6>Al-Azhar University – Gaza</h6>
               </div>
             </div>
           </div>
-        )}
-      </TrackVisibility>
+        </div>
+      </div>
     </div>
   </section>
 );
