@@ -1,19 +1,23 @@
+// A point is either a plain string or { client, place?, text } (the client name gets highlighted).
 const freelance = {
   role: "Freelance Full-Stack Developer",
   company: "Self-employed · Remote",
   period: "June 2020 – Present",
   points: [
-    "Built an end-to-end admin dashboard with React.js, Express.js and PostgreSQL, including authentication, file uploads and role-based access.",
-    "Converted client XD designs into pixel-accurate, responsive, SEO-optimized pages.",
+    "Delivered full-stack and front-end freelance work, building an end-to-end admin dashboard with React.js, Express.js and PostgreSQL, including auth, file uploads and role-based access, and converting client XD designs into pixel-accurate, responsive, SEO-optimized pages.",
     {
-      client: "Trackita Pty Ltd",
-      place: "Australia",
-      text: "contributed to an open-source design system aligned with Storybook's visual identity, working with an engineering team on a project with 2,000+ developers.",
+      client: "Jade Rune Publishing",
+      text: "engineered and deployed three responsive, single-page websites, optimizing front-end assets to reduce page load time by 40% and contributing to a 25% increase in client inquiries, supporting business growth to 2,000+ transactions per month.",
     },
     {
       client: "Aesthetic Essential",
-      place: "Georgia",
-      text: "developed a responsive React.js website with Home, Products, About and Contact pages, showcasing a catalog of 600+ products.",
+      place: "Republic of Georgia",
+      text: "developed a responsive React.js website for a beauty and cosmetics business, building the Home, Products, About and Contact pages to showcase a catalog of 600+ products, as the business reached 10,000 sales per month.",
+    },
+    {
+      client: "Trackita Pty Ltd",
+      place: "Australia",
+      text: "contributed to an open-source design system aligned with Storybook, collaborating with a community of 2,000+ developers to build and scale reusable React components for a product reaching 97.88M+ monthly installs.",
     },
   ],
 };
@@ -23,9 +27,9 @@ const reach = {
   company: "Reach Online Company",
   period: "Oct 2022 – Jan 2023",
   points: [
-    "Developed 5+ landing pages for Google and Meta Ads campaigns from XD and Figma designs, each delivered in 3 days with a 95 Lighthouse performance score.",
-    "Built an admin dashboard with 3 charts, authentication, file uploads and role-based access control.",
-    "Implemented the front end of 2+ e-commerce websites with product catalogs, shopping carts and a one-step checkout supporting PayPal and Stripe.",
+    "Developed 3+ landing pages for Google and Meta Ads campaigns, translating XD and Figma designs into responsive React.js interfaces using HTML and CSS, with cross-browser compatibility and web accessibility best practices aligned with WCAG guidelines.",
+    "Built a scalable admin dashboard with role-based access control for one Super Admin and unlimited Users, featuring authentication, file uploads and 3 analytics charts.",
+    "Implemented the front end of 2+ e-commerce websites with product catalogs, shopping carts and one-step checkout with PayPal and Stripe, supporting websites generating over $50K in revenue monthly.",
   ],
 };
 
@@ -34,14 +38,14 @@ const frystmat = {
   company: "Frystmat MENA Foods AB · Remote",
   period: "Oct 2021 – Apr 2024",
   points: [
-    "Cut reporting and performance-tracking time by half with custom Zoho Books workflows and a Zoho CRM function with an employee-facing UI that generated reports automatically. Used by a 10-person team across Turkey, Sweden and remote locations.",
-    "Kept international clients updated on around 30 cargo shipments each month, helping avoid port charges of $300+ per day for late shipments.",
-    "Trained and managed new employees, in person and remotely, through onboarding on company systems and workflows.",
+    "Reduced the time and effort required for reporting and performance tracking by half with custom Zoho Books workflows and a Zoho CRM function with an employee-facing UI that automatically generated reports from entered data. Enabled the CEO to monitor and evaluate employee performance, with the solution used by a 10-person team across Turkey, Sweden and remote locations.",
+    "Kept international clients updated on around 30 cargo shipments each month to avoid port charges of $300+ per day for each late shipment.",
+    "Trained and managed new employees, in person and remotely, by leading onboarding on company systems and workflows.",
   ],
 };
 
-const leftColumn = [freelance, reach];
-const rightColumn = [frystmat];
+const leftColumn = [frystmat, reach];
+const rightColumn = [freelance];
 
 const JobCard = ({ job }) => (
   <div className="sx-item">
@@ -56,7 +60,8 @@ const JobCard = ({ job }) => (
             <li key={i}>{pt}</li>
           ) : (
             <li key={i}>
-              <span className="sx-co">{pt.client}</span> ({pt.place}): {pt.text}
+              <span className="sx-co">{pt.client}</span>
+              {pt.place ? ` (${pt.place})` : ""}: {pt.text}
             </li>
           )
         )}
