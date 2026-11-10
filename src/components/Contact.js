@@ -1,9 +1,5 @@
 import { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
-import contactImg from "../assets/img/contact-img.svg";
-// import "animate.css";
-import TrackVisibility from "react-on-screen";
 
 const SERVICE_ID = "service_8k64i0h";
 const TEMPLATE_ID = "template_ya4rv61";
@@ -19,7 +15,7 @@ const formInitialDetails = {
 
 export const Contact = () => {
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState("Send");
+  const [buttonText, setButtonText] = useState("Send ↗");
   const [status, setStatus] = useState({});
 
   const onFormUpdate = (category, value) => {
@@ -51,93 +47,100 @@ export const Contact = () => {
         message: "Something went wrong, please try again later.",
       });
     } finally {
-      setButtonText("Send");
+      setButtonText("Send ↗");
     }
   };
 
   return (
-    <section className="contact" id="connect">
-      <Container>
-        <Row className="align-items-center">
-          <Col xs={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <img
-                  className={isVisible ? "" : ""}
-                  src={contactImg}
-                  alt="Contact Us"
-                />
+    <section className="sx ct" id="connect">
+      <div className="container">
+        <div className="sx-head">
+          <span>Contact</span>
+          <span>Let's work together</span>
+        </div>
+
+        <div className="ct-grid">
+          <div>
+            <h2 className="ct-title">
+              Have an idea? <em>Tell me about it.</em>
+            </h2>
+            <p className="ct-text">
+              Send me a message about your project, idea or opportunity, and
+              I'll get back to you.
+            </p>
+            <span className="ct-avail">
+              <i />
+              Open to new opportunities and freelance projects
+            </span>
+          </div>
+
+          <form className="ct-form" onSubmit={handleSubmit}>
+            <div className="ct-field">
+              <label htmlFor="ct-first">First name</label>
+              <input
+                id="ct-first"
+                type="text"
+                required
+                value={formDetails.firstName}
+                placeholder="Your first name"
+                onChange={(e) => onFormUpdate("firstName", e.target.value)}
+              />
+            </div>
+            <div className="ct-field">
+              <label htmlFor="ct-last">Last name</label>
+              <input
+                id="ct-last"
+                type="text"
+                value={formDetails.lastName}
+                placeholder="Your last name"
+                onChange={(e) => onFormUpdate("lastName", e.target.value)}
+              />
+            </div>
+            <div className="ct-field">
+              <label htmlFor="ct-email">Email address</label>
+              <input
+                id="ct-email"
+                type="email"
+                required
+                value={formDetails.email}
+                placeholder="you@company.com"
+                onChange={(e) => onFormUpdate("email", e.target.value)}
+              />
+            </div>
+            <div className="ct-field">
+              <label htmlFor="ct-phone">Phone no.</label>
+              <input
+                id="ct-phone"
+                type="tel"
+                value={formDetails.phone}
+                placeholder="Optional"
+                onChange={(e) => onFormUpdate("phone", e.target.value)}
+              />
+            </div>
+            <div className="ct-field ct-full">
+              <label htmlFor="ct-message">Message</label>
+              <textarea
+                id="ct-message"
+                rows="4"
+                required
+                value={formDetails.message}
+                placeholder="Tell me a little about the work…"
+                onChange={(e) => onFormUpdate("message", e.target.value)}
+              ></textarea>
+            </div>
+            <div className="ct-actions">
+              <button type="submit" disabled={buttonText === "Sending..."}>
+                {buttonText}
+              </button>
+              {status.message && (
+                <p className={status.success ? "ct-ok" : "ct-err"}>
+                  {status.message}
+                </p>
               )}
-            </TrackVisibility>
-          </Col>
-          <Col xs={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div className={isVisible ? "" : ""}>
-                  <h2>Get In Touch</h2>
-                  <form onSubmit={handleSubmit}>
-                    <Row>
-                      <Col xs={12} sm={6} className="px-1">
-                        <input
-                          type="text"
-                          required
-                          value={formDetails.firstName}
-                          placeholder="First Name"
-                          onChange={(e) => onFormUpdate("firstName", e.target.value)}
-                        />
-                      </Col>
-                      <Col xs={12} sm={6} className="px-1">
-                        <input
-                          type="text"
-                          value={formDetails.lastName}
-                          placeholder="Last Name"
-                          onChange={(e) => onFormUpdate("lastName", e.target.value)}
-                        />
-                      </Col>
-                      <Col xs={12} sm={6} className="px-1">
-                        <input
-                          type="email"
-                          required
-                          value={formDetails.email}
-                          placeholder="Email Address"
-                          onChange={(e) => onFormUpdate("email", e.target.value)}
-                        />
-                      </Col>
-                      <Col xs={12} sm={6} className="px-1">
-                        <input
-                          type="tel"
-                          value={formDetails.phone}
-                          placeholder="Phone No."
-                          onChange={(e) => onFormUpdate("phone", e.target.value)}
-                        />
-                      </Col>
-                      <Col xs={12} className="px-1">
-                        <textarea
-                          rows="6"
-                          required
-                          value={formDetails.message}
-                          placeholder="Message"
-                          onChange={(e) => onFormUpdate("message", e.target.value)}
-                        ></textarea>
-                        <button type="submit" disabled={buttonText === "Sending..."}>
-                          <span>{buttonText}</span>
-                        </button>
-                      </Col>
-                      {status.message && (
-                        <Col>
-                          <p className={status.success ? "success" : "danger"}>
-                            {status.message}
-                          </p>
-                        </Col>
-                      )}
-                    </Row>
-                  </form>
-                </div>
-              )}
-            </TrackVisibility>
-          </Col>
-        </Row>
-      </Container>
+            </div>
+          </form>
+        </div>
+      </div>
     </section>
   );
 };
