@@ -1590,10 +1590,8 @@ select {
   width: 1px;
   background: rgba(255, 255, 255, 0.12);
 }
-.sx-col { display: flex; flex-direction: column; gap: 20px; }
+.sx-col { display: flex; flex-direction: column; justify-content: space-between; gap: 20px; }
 .sx-item { position: relative; }
-.sx-col-right .sx-item:first-child { flex: 1; display: flex; }
-.sx-col-right .sx-item:first-child .sx-ecard { flex: 1; }
 .sx-dot {
   position: absolute;
   top: 24px;
@@ -1744,7 +1742,7 @@ select {
   .sx-tl { grid-template-columns: 1fr; padding-left: 22px; row-gap: 20px; }
   .sx-tl::before { left: 0; }
   .sx-dot, .sx-col-right .sx-dot { left: -29px; right: auto; }
-  .sx-col-right .sx-item:first-child { display: block; }
+  .sx-col { justify-content: flex-start; }
   .pd-grid { grid-template-columns: 1fr; gap: 30px; }
 }
 
